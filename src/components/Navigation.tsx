@@ -48,7 +48,9 @@ const Navigation = ({ searchQuery, onSearchChange }: NavigationProps) => {
   return (
     <nav className="relative flex items-center justify-between py-6 text-white">
       <div className="flex items-center gap-8">
-        <img src="/logo.png" alt="Vite logo" className="h-8 w-auto" />
+        <Link to="/" aria-label="Go to home">
+          <img src="/logo.png" alt="Vite logo" className="h-8 w-auto" />
+        </Link>
 
         <ul className="hidden items-center gap-8 text-sm uppercase tracking-[0.4em] md:flex">
           {navLinks.map(({ label, path }) => {
