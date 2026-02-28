@@ -117,7 +117,7 @@ const Navigation = ({ searchQuery, onSearchChange }: NavigationProps) => {
       </div>
 
       {isMenuOpen && (
-        <div className="absolute left-0 right-0 top-full rounded-md border border-white/10 bg-red-400 p-4 text-white shadow-lg md:hidden">
+        <div className="absolute left-0 right-0 top-full rounded-md border border-white/10 bg-black/70 backdrop-blur-md p-4 text-white shadow-lg md:hidden z-[999]">
           <ul className="flex flex-col gap-4 text-sm font-semibold uppercase tracking-wide">
             {navLinks.map(({ label, path }) => (
               <li key={label}>
