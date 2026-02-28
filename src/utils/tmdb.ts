@@ -19,8 +19,8 @@ export const buildImageUrl = (
 export const mapTmdbTitleToMovie = (tmdbTitle: TmdbTitle): Movie => ({
   id: tmdbTitle.id,
   title: tmdbTitle.title || tmdbTitle.name || tmdbTitle.original_title || tmdbTitle.original_name || 'Untitled',
-  backdrop_path: tmdbTitle.backdrop_path,
-  poster_path: tmdbTitle.poster_path,
+  backdrop_path: tmdbTitle.backdrop_path ?? undefined,
+  poster_path: tmdbTitle.poster_path ?? undefined,
   media_type: tmdbTitle.media_type,
   overview: tmdbTitle.overview,
   vote_average: tmdbTitle.vote_average,
